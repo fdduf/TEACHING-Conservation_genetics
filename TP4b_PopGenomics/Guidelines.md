@@ -174,11 +174,11 @@ levels(pop(microsat))<-c("Ile verte","Rimouski","LUD", "PLT", "Sept île" ,"BG",
 ```r
 tab_microsat<-tab(microsat, freq=TRUE, NA.method="mean")
 pca<-dudi.pca(tab_microsat, center=TRUE, scale=FALSE)
-#dudi.pca(df = tab_microsat, center = TRUE, scale = FALSE, scannf = FALSE, nf = 3)
+dudi.pca(df = tab_microsat, center = TRUE, scale = FALSE, scannf = FALSE, nf = 3)
 
 ## plot showing groups
 s.class(pca$li, pop(microsat), col=rainbow(7))
-add.scatter.eig(pca1$eig,2,1,2,posi = "bottomright")
+add.scatter.eig(pca$eig,2,1,2,posi = "bottomright")
 ```
 
 <p align="center"> 
